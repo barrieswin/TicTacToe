@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<div>
+    <div></div>
+    <div></div>
+    <h1>Tic-Tac-Toe Game</h1>
+    <div></div>
+    <div></div>
+    <div class="board">
+        @for (int i = 0; i < board.Length; i++)
+        {
+            int idx = i;
+            <div class="square"
+             @onclick="()=> SquareClicked(idx)">
+                <h5 class="char">@board[i]</h5>
+            </div>
+        }
+    </div>
+</div>
+
+
+
